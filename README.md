@@ -106,3 +106,6 @@ Submit your code by uploading it to this repo.
 
 # Autograding
 The autograder will run and check your answers against what is expected.
+
+
+test: Editing read me and commiting from local to github
