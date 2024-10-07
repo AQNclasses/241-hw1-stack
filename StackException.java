@@ -5,6 +5,5 @@ public class StackException extends Exception {
     public StackException(String errorMessage, Throwable err) {
         super(errorMessage, err);
     }
-    // testing 123
     
 }
