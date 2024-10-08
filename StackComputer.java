@@ -1,10 +1,6 @@
 /**
  * Create a stack computer
  */
-// note for self: having issues with "make run"
-// instead test program by inputting: java -cp . StackComputer in WSL terminal  
-
-	
 public class StackComputer {
     /**
      * Create a stack computer with a given maximum stack size
@@ -16,7 +12,7 @@ public class StackComputer {
 
     public StackComputer(int maxsize) {
         stack = new int[maxsize];
-        this.maxsize = maxsize;
+        maxsize = maxsize;
     }
 
     /**
@@ -53,13 +49,7 @@ public class StackComputer {
      * throw a StackException
      */
     public int pop() throws StackException {
-        if (top <= 0) {
-            throw new StackException("Stack is empty");
-
-        }
-
-        top--;
-        return stack[top];
+        return 0;
     }
 
     /**
@@ -67,11 +57,7 @@ public class StackComputer {
      * empty
      */
     public int peek() throws StackException {
-        if (top <= 0) {
-            throw new StackException("stack is empty");
-
-        }
-        return stack[top-1];
+        return 0;
     }
 
     /**
@@ -79,12 +65,6 @@ public class StackComputer {
      * Throw a StackException if the stack is empty
      */
     public void add() throws StackException {
-        if (top < 1) {
-            throw new StackException("Not enough in stack");
-        }
-        int value1 = pop();
-        int value2 = pop();
-        push(value1 + value2);
     }
 
     /**
@@ -94,14 +74,6 @@ public class StackComputer {
      * Throw a StackException if the stack is empty.
      */
     public void sub() throws StackException {
-        if (top < 1) {
-            throw new StackException("Nopt enough in stack");
-        }
-        int value1 =  pop();
-        int value2 = pop();
-        int result = value2 - value1;
-        push(result);
-
     }
 
     /**
@@ -110,13 +82,6 @@ public class StackComputer {
      * Throw a StackException if the stack is empty
      */
     public void mul() throws StackException {
-        if (top < 1) {
-            throw new StackException("Not enough in stack");
-        }
-        int value1 =  pop();
-        int value2 = pop();
-        int result = value1 * value2;
-        push(result);
     }
 
     /**
@@ -126,16 +91,6 @@ public class StackComputer {
      * Throw a StackException if the stack is empty
      */
     public void div() throws StackException {
-        if (top < 2) {
-            throw new StackException("Not enough in stack");
-        }
-        int value1 =  pop();
-        int value2 = pop();
-        if (value1 == 0) {
-            throw new ArithmeticException("Can't divide by zero");
-        }
-        int result = value2 / value1;
-        push(result);
     }
 
     public static void main(String[] args) throws StackException {
@@ -151,6 +106,5 @@ public class StackComputer {
 
         comp.sub();
         System.out.println(comp.pop());      // should be -25
-        //testing and committing to main
     }
 }
